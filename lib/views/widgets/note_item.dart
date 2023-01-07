@@ -113,11 +113,11 @@ class NoteItem extends StatelessWidget {
                     size: 8.w,
                   ),
                   onPressed: () {
-                    /*showDialog(
+                    showDialog(
                       context: context,
                       builder: (ctx) => DeleteDialog(note: note),
-                    );*/
-                    NoteModel deletedNote = note;
+                    );
+                    /*NoteModel deletedNote = note;
                     Color deletedNoteColor = Color(deletedNote.color);
                     note.delete();
                     BlocProvider.of<NotesCubit>(context).fetchAllNotes();
@@ -129,7 +129,7 @@ class NoteItem extends StatelessWidget {
                         ),
                         backgroundColor: kPrimaryColor,
                         content: const Text('Note deleted'),
-                        duration: const Duration(minutes: 5),
+                        duration: const Duration(seconds: 5),
                         action: SnackBarAction(
                           textColor: Colors.black,
                           label: 'UNDO',
@@ -143,7 +143,7 @@ class NoteItem extends StatelessWidget {
                           },
                         ),
                       ),
-                    );
+                    );*/
                   },
                 ),
               ),
