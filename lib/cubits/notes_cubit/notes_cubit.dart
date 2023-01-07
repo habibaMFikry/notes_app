@@ -18,7 +18,8 @@ class NotesCubit extends Cubit<NotesState> {
   fetchAllNotes() {
     var notesBox = Hive.box<NoteModel>(kNotesBox);
 
-    notes = notesBox.values.toList().reversed.toList();
+    notes = notesBox.values.toList();
+    notes!.sort((b, a) => a.date.compareTo(b.date));
 
     //print('object');
     //print(notes![1].title);

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/constants.dart';
+import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
 import 'package:notes_app/views/widgets/delete_dialog.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../cubits/notes_cubit/notes_cubit.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
@@ -108,26 +113,37 @@ class NoteItem extends StatelessWidget {
                     size: 8.w,
                   ),
                   onPressed: () {
-                    showDialog(
+                    /*showDialog(
                       context: context,
                       builder: (ctx) => DeleteDialog(note: note),
-                    );
-                    // var deletedNote = note;
-                    /*note.delete();
-                    BlocProvider.of<NotesCubit>(context).fetchAllNotes();*/
+                    );*/
+                    NoteModel deletedNote = note;
+                    Color deletedNoteColor = Color(deletedNote.color);
+                    note.delete();
+                    BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                     //ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                    /*ScaffoldMessenger.of(context).showSnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('note deleted'),
-                        duration: Duration(seconds: 2),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.w),
+                        ),
+                        backgroundColor: kPrimaryColor,
+                        content: const Text('Note deleted'),
+                        duration: const Duration(minutes: 5),
                         action: SnackBarAction(
+                          textColor: Colors.black,
                           label: 'UNDO',
                           onPressed: () {
-                            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                            BlocProvider.of<AddNoteCubit>(context).color =
+                                deletedNoteColor;
+                            BlocProvider.of<AddNoteCubit>(context)
+                                .addNote(deletedNote);
+                            BlocProvider.of<NotesCubit>(context)
+                                .fetchAllNotes();
                           },
                         ),
                       ),
-                    );*/
+                    );
                   },
                 ),
               ),

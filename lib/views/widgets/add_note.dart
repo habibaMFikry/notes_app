@@ -10,31 +10,32 @@ class AddNote extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return /*BlocProvider(
       create: (context) => AddNoteCubit(),
-      child: BlocConsumer<AddNoteCubit, AddNoteState>(
-        listener: (context, state) {
-          if (state is AddNoteFailure) {
-            //
-          } else if (state is AddNoteSuccess) {
-            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-            Navigator.pop(context);
-          }
-        },
-        builder: (context, state) {
-          return AbsorbPointer(
-            absorbing: state is AddNoteLoading ? true : false,
-            child: Padding(
-              padding: EdgeInsets.only(
-                  top: 4.h,
-                  bottom: /* 2.h,*/ MediaQuery.of(context).viewInsets.bottom,
-                  right: 2.h,
-                  left: 2.h),
-              child: const SingleChildScrollView(child: AddNoteForm()),
-            ),
-          );
-        },
-      ),
+      child:*/
+        BlocConsumer<AddNoteCubit, AddNoteState>(
+      listener: (context, state) {
+        if (state is AddNoteFailure) {
+          //
+        } else if (state is AddNoteSuccess) {
+          BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+          Navigator.pop(context);
+        }
+      },
+      builder: (context, state) {
+        return AbsorbPointer(
+          absorbing: state is AddNoteLoading ? true : false,
+          child: Padding(
+            padding: EdgeInsets.only(
+                top: 4.h,
+                bottom: /* 2.h,*/ MediaQuery.of(context).viewInsets.bottom,
+                right: 2.h,
+                left: 2.h),
+            child: const SingleChildScrollView(child: AddNoteForm()),
+          ),
+        );
+      },
+      // ),
     );
   }
 }
