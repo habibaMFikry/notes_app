@@ -49,37 +49,39 @@ class _NotesViewBodyState extends State<NotesViewBody> {
                       size: 28,
                     ),
                     title: */
-                      BlocBuilder<NotesCubit, NotesState>(
+                      /* BlocBuilder<NotesCubit, NotesState>(
                     builder: (context, state) {
-                      return Expanded(
-                        child: TextFormField(
-                          onChanged: (value) {
-                            setState(() {
-                              //searchString = '';
-                              searchString = value.toLowerCase();
-                              BlocProvider.of<NotesCubit>(context)
-                                  .searchNote(searchString);
-                              /* for (var i = 0; i > 10; i++) {
+                      return */
+                      Expanded(
+                    child: TextFormField(
+                      onChanged: (value) {
+                        setState(() {
+                          //searchString = '';
+                          searchString = value.toLowerCase();
+                          BlocProvider.of<NotesCubit>(context)
+                              .searchNote(searchString);
+                          /* for (var i = 0; i > 10; i++) {
                                                   if (searchString == notes[i].title) {
                                                     searchedNotesList = notes;
                                                   }
                                                 }*/
-                            });
-                          },
-                          decoration: InputDecoration(
-                            hintText: 'Search',
-                            hintStyle: TextStyle(
-                              fontSize: 14.sp,
-                              //fontStyle: FontStyle.italic,
-                            ),
-                          ),
+                        });
+                      },
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: TextStyle(
+                          fontSize: 14.sp,
+                          //fontStyle: FontStyle.italic,
                         ),
-                      );
-                    },
+                      ),
+                    ),
+                    // );
+                    //},
                   );
                   //);
                 } else {
                   customIcon = const Icon(Icons.search);
+                  searchString = null;
                   customSearchBar = Text(
                     'Notes',
                     style: TextStyle(color: Colors.white, fontSize: 25.sp),

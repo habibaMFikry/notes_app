@@ -17,8 +17,6 @@ class SearchList extends StatelessWidget {
       builder: (context, state) {
         List<NoteModel> searchedNotes =
             BlocProvider.of<NotesCubit>(context).results ?? [];
-        /*List<NoteModel>? searchedNotes =
-            BlocProvider.of<NotesCubit>(context).results ?? [];*/
 
         return Expanded(
           child: (searchText == null)
@@ -32,13 +30,7 @@ class SearchList extends StatelessWidget {
                     return Padding(
                       padding: EdgeInsets.only(bottom: 1.h),
                       child: NoteItem(
-                        note: /*(searchString != null && searchedNotes.isNotEmpty
-                            /* &&
-                              searchString == notes[0].title*/
-                            )
-                            ? searchedNotes[index]
-                            :*/
-                            searchedNotes[index], //searchedNotesList![index],
+                        note: searchedNotes[index],
                       ),
                     );
                   },
