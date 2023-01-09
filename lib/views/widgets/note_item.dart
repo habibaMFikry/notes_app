@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 //import 'package:flutter_bloc/flutter_bloc.dart';
 //import 'package:notes_app/constants.dart';
 //import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
@@ -6,6 +7,8 @@ import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
 import 'package:notes_app/views/widgets/delete_dialog.dart';
 import 'package:sizer/sizer.dart';
+
+import '../notes_view.dart';
 
 //import '../../cubits/notes_cubit/notes_cubit.dart';
 
@@ -30,7 +33,7 @@ class NoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final date = DateTime.parse(note.date);
+    final date = DateTime.parse(note.date);
     return /*Padding(
       padding: EdgeInsets.symmetric(vertical: 3.h),
       child: */
@@ -117,6 +120,8 @@ class NoteItem extends StatelessWidget {
                       context: context,
                       builder: (ctx) => DeleteDialog(note: note),
                     );
+
+                    //BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                     /*NoteModel deletedNote = note;
                     Color deletedNoteColor = Color(deletedNote.color);
                     note.delete();
@@ -150,8 +155,8 @@ class NoteItem extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(right: 3.h),
                 child: Text(
-                  //DateFormat('dd/MM/yyyy  hh:mm').format(date),
-                  note.date,
+                  DateFormat('dd/MM/yyyy  hh:mm').format(date),
+                  //note.date,
                   style: const TextStyle(color: Colors.black54, fontSize: 15),
                 ),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
+//import 'package:intl/intl.dart';
 //import 'package:intl/intl.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
@@ -23,8 +23,8 @@ class _EditViewBodyState extends State<EditViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    var date = DateTime.now();
-    var formattedDate = DateFormat('dd/MM/yyyy  hh:mm').format(date);
+    // var date = DateTime.now();
+    // var formattedDate = DateFormat('dd/MM/yyyy  hh:mm').format(date);
     return Padding(
       padding: EdgeInsets.only(right: 2.5.h, left: 2.5.h),
       child: Column(
@@ -36,7 +36,7 @@ class _EditViewBodyState extends State<EditViewBody> {
             onPressed: () {
               widget.note.title = title ?? widget.note.title;
               widget.note.content = content ?? widget.note.content;
-              widget.note.date = formattedDate;
+              widget.note.date = DateTime.now().toString(); //formattedDate;
               widget.note.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
