@@ -32,6 +32,7 @@ class DeleteDialog extends StatelessWidget {
             note.delete();
             BlocProvider.of<NotesCubit>(context).fetchAllNotes();
             Navigator.of(context).pop(true);
+            //print(ModalRoute.of(context)!.settings.name);
             /* Navigator.pushReplacement(
               context,
               MaterialPageRoute(

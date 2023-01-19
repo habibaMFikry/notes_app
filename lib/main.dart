@@ -6,6 +6,7 @@ import 'package:notes_app/constants.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/simple_bloc_observer.dart';
 import 'package:notes_app/views/notes_view.dart';
+import 'package:notes_app/views/widgets/new_note_item.dart';
 import 'package:sizer/sizer.dart';
 
 import 'cubits/notes_cubit/notes_cubit.dart';

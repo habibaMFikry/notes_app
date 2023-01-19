@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/views/widgets/new_note_item.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../cubits/notes_cubit/notes_cubit.dart';
@@ -29,7 +30,7 @@ class SearchList extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: EdgeInsets.only(bottom: 1.h),
-                      child: NoteItem(
+                      child: NewNoteItem(
                         note: searchedNotes[index],
                       ),
                     );

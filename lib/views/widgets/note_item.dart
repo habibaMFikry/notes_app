@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 //import 'package:flutter_bloc/flutter_bloc.dart';
 //import 'package:notes_app/constants.dart';
@@ -8,7 +8,7 @@ import 'package:notes_app/views/edit_note_view.dart';
 import 'package:notes_app/views/widgets/delete_dialog.dart';
 import 'package:sizer/sizer.dart';
 
-import '../notes_view.dart';
+//import '../notes_view.dart';
 
 //import '../../cubits/notes_cubit/notes_cubit.dart';
 
@@ -60,6 +60,7 @@ class NoteItem extends StatelessWidget {
           builder: (ctx) => DeleteDialog(note: note),
         );
       },
+
       /*onDismissed: (direction) {
         note.delete();
         BlocProvider.of<NotesCubit>(context).fetchAllNotes();
@@ -93,6 +94,7 @@ class NoteItem extends StatelessWidget {
               ListTile(
                 title: Text(
                   note.title,
+                  overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                   style: TextStyle(color: Colors.black, fontSize: 23.sp),
                 ),
@@ -103,6 +105,7 @@ class NoteItem extends StatelessWidget {
                     child:*/
                       Text(
                     note.content,
+                    overflow: TextOverflow.ellipsis,
                     //note.content.characters.getRange(0, 25).toString(),
                     maxLines: 1,
                     style: const TextStyle(color: Colors.black54, fontSize: 18),
@@ -121,7 +124,6 @@ class NoteItem extends StatelessWidget {
                       builder: (ctx) => DeleteDialog(note: note),
                     );
 
-                    //BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                     /*NoteModel deletedNote = note;
                     Color deletedNoteColor = Color(deletedNote.color);
                     note.delete();
@@ -168,4 +170,4 @@ class NoteItem extends StatelessWidget {
       ),
     );
   }
-}
+}*/

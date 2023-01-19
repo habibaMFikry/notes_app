@@ -33,7 +33,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
   Widget build(BuildContext context) {
     //List<NoteModel>? notes = BlocProvider.of<NotesCubit>(context).notes ?? [];
     return Padding(
-      padding: EdgeInsets.only(bottom: 1.5.h, right: 2.5.h, left: 2.5.h),
+      padding: EdgeInsets.only(bottom: 1.5.h, right: 1.5.h, left: 1.5.h),
       child: Column(
         children: [
           CustomAppBar(
