@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
-import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/views/widgets/new_note_item.dart';
-import 'package:notes_app/views/widgets/note_item.dart';
-import 'package:sizer/sizer.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:sizer/sizer.dart';
+
+import '../../../data/models/note_model.dart';
+import '../../manger/notes_cubit/notes_cubit.dart';
+import 'new_note_item.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({super.key, this.aspectRatio = 0.65}); //const

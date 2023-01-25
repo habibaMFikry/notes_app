@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../models/note_model.dart';
-import '../edit_note_view.dart';
+import '../../../../edit/presentation/views/edit_note_view.dart';
+import '../../../data/models/note_model.dart';
 import 'delete_dialog.dart';
 
 class NewNoteItem extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
-import 'package:notes_app/views/widgets/color_item.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../constants.dart';
+import '../../../../../constants.dart';
+import '../../../../../core/widgets/color_item.dart';
+import '../../manger/add_note_cubit/add_note_cubit.dart';
 
 class AddColorsList extends StatefulWidget {
   const AddColorsList({super.key});

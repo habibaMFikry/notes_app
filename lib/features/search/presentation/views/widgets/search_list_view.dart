@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/views/widgets/new_note_item.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../cubits/notes_cubit/notes_cubit.dart';
-import '../../models/note_model.dart';
-import 'note_item.dart';
+import '../../../../home/data/models/note_model.dart';
+import '../../../../home/presentation/manger/notes_cubit/notes_cubit.dart';
+import '../../../../home/presentation/views/widgets/new_note_item.dart';
 
 class SearchList extends StatelessWidget {
   const SearchList({super.key, required this.searchText});

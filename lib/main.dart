@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:notes_app/constants.dart';
-//import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
-import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/simple_bloc_observer.dart';
-import 'package:notes_app/views/notes_view.dart';
-import 'package:notes_app/views/widgets/new_note_item.dart';
+import 'package:notes_app/features/home/presentation/views/notes_view.dart';
+
 import 'package:sizer/sizer.dart';
 
-import 'cubits/notes_cubit/notes_cubit.dart';
+import 'features/home/data/models/note_model.dart';
+import 'features/home/presentation/manger/notes_cubit/notes_cubit.dart';
 
 void main() async {
   await Hive.initFlutter();
