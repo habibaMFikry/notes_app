@@ -4,7 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../data/models/note_model.dart';
-import '../../manger/notes_cubit/notes_cubit.dart';
+import '../../manager/notes_cubit/notes_cubit.dart';
 import 'new_note_item.dart';
 
 class NotesListView extends StatelessWidget {

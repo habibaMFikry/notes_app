@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/features/search/presentation/views/widgets/search_list_view.dart';
+
 import 'package:notes_app/features/search/presentation/views/search_view.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../../../core/widgets/custom_app_bar.dart';
-import '../../manger/notes_cubit/notes_cubit.dart';
+import '../../manager/notes_cubit/notes_cubit.dart';
 import 'notes_list_view.dart';
 
 class NotesViewBody extends StatefulWidget {

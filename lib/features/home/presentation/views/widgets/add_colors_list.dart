@@ -4,7 +4,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/widgets/color_item.dart';
-import '../../manger/add_note_cubit/add_note_cubit.dart';
+import '../../manager/add_note_cubit/add_note_cubit.dart';
 
 class AddColorsList extends StatefulWidget {
   const AddColorsList({super.key});

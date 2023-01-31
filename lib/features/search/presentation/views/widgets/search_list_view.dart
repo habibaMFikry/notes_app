@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../home/data/models/note_model.dart';
-import '../../../../home/presentation/manger/notes_cubit/notes_cubit.dart';
+import '../../../../home/presentation/manager/notes_cubit/notes_cubit.dart';
 import '../../../../home/presentation/views/widgets/new_note_item.dart';
 
 class SearchList extends StatelessWidget {

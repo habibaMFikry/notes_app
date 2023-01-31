@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../home/data/models/note_model.dart';
-import '../../../../home/presentation/manger/notes_cubit/notes_cubit.dart';
+import '../../../../home/presentation/manager/notes_cubit/notes_cubit.dart';
 import 'edit_color_list.dart';
 
 class EditViewBody extends StatefulWidget {

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../constants.dart';
 import '../../../data/models/note_model.dart';
-import '../../manger/notes_cubit/notes_cubit.dart';
+import '../../manager/notes_cubit/notes_cubit.dart';
 
 class DeleteDialog extends StatelessWidget {
   const DeleteDialog({super.key, required this.note});

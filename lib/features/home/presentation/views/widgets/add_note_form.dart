@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../data/models/note_model.dart';
-import '../../manger/add_note_cubit/add_note_cubit.dart';
+import '../../manager/add_note_cubit/add_note_cubit.dart';
 import 'add_colors_list.dart';
 import 'custom_button.dart';
 

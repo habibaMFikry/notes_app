@@ -4,7 +4,7 @@ import 'package:notes_app/core/widgets/custom_app_bar.dart';
 import 'package:notes_app/core/widgets/custom_text_field.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../../home/presentation/manger/notes_cubit/notes_cubit.dart';
+import '../../../../home/presentation/manager/notes_cubit/notes_cubit.dart';
 import 'search_list_view.dart';
 
 class SearchViewBody extends StatefulWidget {

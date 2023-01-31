@@ -8,7 +8,7 @@ import 'package:notes_app/features/home/presentation/views/notes_view.dart';
 import 'package:sizer/sizer.dart';
 
 import 'features/home/data/models/note_model.dart';
-import 'features/home/presentation/manger/notes_cubit/notes_cubit.dart';
+import 'features/home/presentation/manager/notes_cubit/notes_cubit.dart';
 
 void main() async {
   await Hive.initFlutter();
